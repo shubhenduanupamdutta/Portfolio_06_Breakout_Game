@@ -24,10 +24,11 @@ class Scoreboard(Turtle):
 
     def game_over(self, player_wins):
         self.home()
-        self.color("red")
         message = "GAME OVER"
         if player_wins:
-            message += "\n🥳🥳 YOU WIN! 🎉🎉"
+            self.color("green")
+            message += "\n YOU WIN!"
         else:
-            message += "\nYOU LOSE! 😢"
+            self.color("red")
+            message += "\nYOU LOSE!"
         self.write(message, align="center", font=("Century", 20, "bold"))
