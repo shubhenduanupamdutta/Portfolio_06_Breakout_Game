@@ -12,6 +12,7 @@ BALL_SIZE: Final[int] = 20
 
 screen = Screen()
 screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
+screen.cv._rootwindow.resizable(False, False)   # fixes the window size
 screen.bgcolor("black")
 screen.title("Breakout Pro")
 screen.tracer(0)
