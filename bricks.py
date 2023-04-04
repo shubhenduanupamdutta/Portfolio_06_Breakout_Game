@@ -4,7 +4,7 @@ from typing import Final
 SCREEN_WIDTH: Final[int] = 500
 SCREEN_HEIGHT: Final[int] = 600
 BRICKS_PER_ROW: Final[int] = 10
-ROWS_OF_BRICKS: Final[int] = 4
+ROWS_OF_BRICKS: Final[int] = 5
 
 
 class Bricks:
@@ -47,7 +47,8 @@ class Bricks:
         positions = []
         scoreboard_height = 50
         row_height = 25
-        x_min, x_max = - (SCREEN_WIDTH // 2 - 25), (SCREEN_WIDTH // 2 + 25)
+        brick_len = 25
+        x_min, x_max = - int((SCREEN_WIDTH - brick_len) / 2) + 7, int((SCREEN_WIDTH - brick_len) / 2)
         y_min, y_max = SCREEN_HEIGHT // 2 - scoreboard_height - self.rows * row_height, SCREEN_HEIGHT // 2 - scoreboard_height
         for x in range(x_min, x_max, SCREEN_WIDTH // self.per_row):
             for y in range(y_min, y_max, row_height):
