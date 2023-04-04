@@ -4,6 +4,7 @@ from typing import Final
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 
 SCREEN_WIDTH: Final[int] = 500
 SCREEN_HEIGHT: Final[int] = 600
@@ -17,6 +18,7 @@ screen.tracer(0)
 
 paddle = Paddle((0, -260))
 ball = Ball()
+scoreboard = Scoreboard()
 screen.update()
 
 screen.exitonclick()
